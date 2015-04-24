@@ -23,6 +23,7 @@ public class ImageListScreen extends ActionBarActivity implements LoaderManager.
     private final int THUMBNAIL_LOADER_ID  = 0;
     private final int IMAGE_LOADER_ID  = 1;
 
+
     MatrixCursor mMatrixCursor;
     Cursor mThumbCursor;
     Cursor mImageCursor;
