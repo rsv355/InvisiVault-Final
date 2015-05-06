@@ -13,4 +13,39 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
 
+
+    <Button
+        android:text="Videos"
+        android:id="@+id/btnVideos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:text="Recordings"
+        android:id="@+id/btnrecordings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:text="Notes"
+        android:id="@+id/btnNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:text="Message"
+        android:id="@+id/btnMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:text="Settings"
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
