@@ -76,6 +76,8 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+
+		renameToJPG();
 		loadFromStorage();
 	}
 
@@ -149,7 +151,7 @@ public class MainActivity extends Activity {
 
 					String tempSubname = subName.substring(0,subName.lastIndexOf("."));
 					//Log.e("Image name", tempSubname);
-					saveToInternalSorage(bitmap,subName);
+					saveToInternalSorage(bitmap,tempSubname);
 					//Log.e("orgin path", all_path[i]);
 				}
 
@@ -182,14 +184,75 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	private void loadFromStorage(){
+	private  void renameToJPG(){
+		String root = Environment.getExternalStorageDirectory().toString();
 
+		String filepath = root+"/.KKK1/";
+		File directory = new File(filepath);
+
+		File[] fList = directory.listFiles();
+
+		for (File file : fList) {
+			if (file.isFile()) {
+
+				String tempName = file.getName().toString();
+				String tempSubname = tempName.substring(0, tempName.lastIndexOf("."));
+				tempSubname += ".jpg";
+
+				File newF =  new File(filepath,tempSubname);
+				file.renameTo(newF);
+
+			}
+		}
+	}
+
+
+
+	private void renameTOKKK(){
+		String root = Environment.getExternalStorageDirectory().toString();
+
+		String filepath = root+"/.KKK1/";
+		File directory = new File(filepath);
+
+		File[] fList = directory.listFiles();
+
+		for (File file : fList) {
+			if (file.isFile()) {
+
+				String tempName = file.getName().toString();
+				String tempSubname = tempName.substring(0, tempName.lastIndexOf("."));
+				tempSubname += ".kkk";
+
+				File newF =  new File(filepath,tempSubname);
+				file.renameTo(newF);
+
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		renameTOKKK();
+	}
+
+
+
+	private void loadFromStorage(){
 
 
 
 		String root = Environment.getExternalStorageDirectory().toString();
 
 		String filepath = root+"/.KKK1/";
+
 
 		File directory = new File(filepath);
 		ArrayList<File> files = new ArrayList<File>();
@@ -201,7 +264,15 @@ public class MainActivity extends Activity {
 		File[] fList = directory.listFiles();
 		for (File file : fList) {
 			if (file.isFile()) {
+
+			String tempName = file.getName().toString();
+			String tempSubname = tempName.substring(0, tempName.lastIndexOf("."));
+			tempSubname += ".jpg";
+
+				File newF =  new File(filepath,tempSubname);
+				file.renameTo(newF);
 				files.add(file);
+
 			}
 		}
 
@@ -243,8 +314,8 @@ public class MainActivity extends Activity {
 
 		//String fname = "Image-"+ n +".kkk";
 
-		//String fname = imageName+".kkk";
-		String fname = imageName;
+		String fname = imageName+".kkk";
+		//String fname = imageName;
 
 		File file = new File (myDir, fname);
 		if (file.exists()) file.delete();
