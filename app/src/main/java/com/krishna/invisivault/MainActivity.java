@@ -29,16 +29,16 @@ public class MainActivity extends ActionBarActivity {
         btnShowList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,MultiPhotoSelectActivity.class);
-                startActivity(intent);
+               /* Intent intent=new Intent(MainActivity.this,MultiPhotoSelectActivity.class);
+                startActivity(intent);*/
             }
         });
 
         btnVideos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,MainActivity.class);
-                startActivity(intent);
+             /*   Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);*/
             }
         });
     }

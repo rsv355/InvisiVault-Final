@@ -20,12 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ImageListScreen"/>
 
-
-        <activity
-            android:name=".Main">
-        </activity>
         <activity
             android:name=".MultiPhotoSelectActivity" >
         </activity>
