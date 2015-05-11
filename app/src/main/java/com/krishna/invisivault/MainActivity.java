@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 	GalleryAdapter adapter;
 
 	ImageView imgSinglePick;
-	Button btnGalleryPick;
+	//Button btnGalleryPick;
 	Button btnGalleryPickMul;
 
 	String action;
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
 
 		imgSinglePick = (ImageView) findViewById(R.id.imgSinglePick);
 
-		btnGalleryPick = (Button) findViewById(R.id.btnGalleryPick);
+/*		btnGalleryPick = (Button) findViewById(R.id.btnGalleryPick);
 		btnGalleryPick.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
 				startActivityForResult(i, 100);
 
 			}
-		});
+		});*/
 
 		btnGalleryPickMul = (Button) findViewById(R.id.btnGalleryPickMul);
 		btnGalleryPickMul.setOnClickListener(new View.OnClickListener() {
