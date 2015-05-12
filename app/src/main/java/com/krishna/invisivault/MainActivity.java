@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -137,7 +138,6 @@ public class MainActivity extends Activity {
 			String[] all_path = data.getStringArrayExtra("all_path");
 
 			Log.e("size",""+all_path.length);
-
 
 			try {
 
